@@ -1,0 +1,58 @@
+#login-wrapper {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #D3D3D3;
+    margin-top: 5%;
+    box-shadow: 0 0 10px;
+
+    #form-wrapper {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        #login-form {
+            width: 300px;
+            height: 200px;
+
+            .field-wrapper {
+                width: 300px;
+                height: 50px;
+                background-color: white;
+                margin-bottom: 10px;
+
+                i {
+                    float: left;
+                    width: 50px;
+                    padding-left: 15px;
+                    padding-top: 10px;
+                }
+
+                input {
+                    float: right;
+                    width: 230px;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            #login-button {
+                width: 300px;
+                height: 50px;
+                border: none;
+            }
+
+        }
+
+        #login-error {
+            width: 300px;
+            height: 50px;
+            text-align: center;
+
+            h5 {
+                color: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WebChat - {% block title %}{% endblock %}</title>
+
+        {% load staticfiles %}
+        {% block css %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.10/sweetalert2.min.css" />
+            <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        {% endblock %}
+
+        {% block js %}
+            <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+            <script src="{% static 'js/base.js' %}"></script>
+            <script src="{% static 'js/cookie.js' %}"></script>
+            <script src="{% static 'js/utils.js' %}"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.10/sweetalert2.min.js"></script>
+            <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="{% static 'js/moment.js' %}"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="banner">
+            <div id="banner-left">
+                <a href="{% url 'dashboard' %}"><img src="{% static 'img/logo.png' %}"></a>
+            </div>
+            {% if user.is_authenticated %}
+                <div id="banner-right">
+                    <div id="options-wrapper">
+                        <div id="user">
+                            <div id="user-icon">
+                                <i class="material-icons">person</i>
+                            </div>
+                            <div id="username">
+                                <h4>User: {{ user.username }}</h4>
+                            </div>
+                        </div>
+                        <div id="drop-down">
+                            <button id="drop-down-button">
+                                <i class="material-icons">arrow_drop_down</i>
+                            </button>
+                            <div id="menu">
+                                <ul>
+                                    <a href="{% url 'logout' %}"><li>Logout</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

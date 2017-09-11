@@ -1,0 +1,61 @@
+#message-block {
+  width: 70%;
+  height: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px;
+  background-color: white; }
+  #message-block #messages {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow-y: auto; }
+    #message-block #messages .message {
+      width: 100%;
+      height: auto;
+      padding-bottom: 10px; }
+      #message-block #messages .message .square {
+        width: auto;
+        display: inline-block;
+        background-color: #cce6ff;
+        padding: 10px 10px 10px 10px;
+        margin-left: 25%;
+        margin-right: 25%; }
+        #message-block #messages .message .square .message-info {
+          font-size: 10px;
+          margin-top: 5px; }
+      #message-block #messages .message .square-left {
+        border-radius: 10px 10px 10px 0px; }
+      #message-block #messages .message .square-right {
+        float: right;
+        border-radius: 10px 10px 0px 10px; }
+      #message-block #messages .message .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        margin-left: 25%;
+        margin-right: 25%; }
+      #message-block #messages .message .triangle-left {
+        border-width: 10px 10px 0 0;
+        border-color: #cce6ff transparent transparent transparent;
+        margin-top: -5px; }
+      #message-block #messages .message .triangle-right {
+        border-width: 0 10px 10px 0;
+        border-color: transparent #cce6ff transparent transparent;
+        float: right;
+        clear: right; }
+  #message-block #compose-message {
+    width: 100%;
+    height: 10%;
+    background-color: #D3D3D3;
+    border-top: 3px solid black; }
+    #message-block #compose-message #compose-message-wrapper {
+      width: 70%;
+      height: 50%;
+      margin: 0 auto;
+      margin-top: 1.5%; }
+      #message-block #compose-message #compose-message-wrapper input {
+        width: 80%;
+        float: left; }
+      #message-block #compose-message #compose-message-wrapper button {
+        width: 20%; }

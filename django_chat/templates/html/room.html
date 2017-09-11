@@ -1,0 +1,39 @@
+{% extends 'html/base.html' %}
+{% block title %}{{ room.name }}{% endblock %}
+{% load staticfiles %}
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/room.css' %}">
+{% endblock %}
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/reconnecting-websocket.min.js' %}"></script>
+    <script src="{% static 'js/room.js' %}"></script>
+{% endblock %}
+{% block content %}
+    <div id="message-block">
+        <div id="messages">
+            {% for message in room.get_messages %}
+                <div class="message">
+                    <div class="square">
+                        <div class="message-text">
+                            {{ message.message }}
+                        </div>
+                        <div class="message-info">
+                            {{ message.handle }} - {{ message.formatted_timestamp }}
+                        </div>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="compose-message">
+            <div id="compose-message-wrapper">
+                <form id="compose-message-form" action="javascript:void(0);">
+                    <input id="compose-message-input" autocomplete="off" placeholder="Enter messsage here..."/>
+                    <button id="send-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

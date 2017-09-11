@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+body #banner {
+  width: 100%;
+  height: 10%;
+  background-color: #D3D3D3;
+  border-bottom: 3px solid black; }
+  body #banner #banner-left {
+    width: 15%;
+    height: 100%;
+    float: left; }
+  body #banner #banner-right {
+    width: 85%;
+    height: 100%;
+    float: right; }
+body #options-wrapper {
+  width: 30%;
+  float: right; }
+  body #options-wrapper #user {
+    float: left;
+    width: 80%; }
+    body #options-wrapper #user #user-icon {
+      float: left;
+      width: 20%; }
+      body #options-wrapper #user #user-icon i {
+        font-size: 40px;
+        margin-top: 20%;
+        text-align: center; }
+    body #options-wrapper #user #username {
+      width: 70%; }
+      body #options-wrapper #user #username h4 {
+        margin-top: 10%; }
+  body #options-wrapper #drop-down {
+    width: 20%; }
+    body #options-wrapper #drop-down button {
+      border: none;
+      background-color: #D3D3D3; }
+      body #options-wrapper #drop-down button i {
+        font-size: 30px;
+        margin-top: 20%; }
+    body #options-wrapper #drop-down #menu {
+      width: 100%;
+      height: 100px;
+      background-color: #D3D3D3;
+      position: absolute;
+      top: 10%;
+      display: none; }
+      body #options-wrapper #drop-down #menu ul {
+        margin: 0;
+        padding: 10px 10px 0px 15px; }
+body #content {
+  background-color: #E6E6FA; }

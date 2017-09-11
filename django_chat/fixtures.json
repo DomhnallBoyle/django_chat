@@ -1,0 +1,77 @@
+[
+  {
+    "model": "auth.User",
+    "pk": 1,
+    "fields": {
+      "first_name": "Domhnall",
+      "last_name": "Boyle",
+      "username": "Domhnall",
+      "password": "pbkdf2_sha256$24000$16ErM87YD3xM$y/xvTT7OM0kv4gqpmHXLtQsj46Xlpd67uOLE6d6D+LY="
+    }
+  },
+  {
+    "model": "auth.User",
+    "pk": 2,
+    "fields": {
+      "first_name": "George",
+      "last_name": "Morris",
+      "username": "GeorgeMorris",
+      "password": "pbkdf2_sha256$24000$16ErM87YD3xM$y/xvTT7OM0kv4gqpmHXLtQsj46Xlpd67uOLE6d6D+LY="
+    }
+  },
+  {
+    "model": "django_chat.Room",
+    "pk": "af970da6-51e9-46e0-8bb1-e2ee69d4794a",
+    "fields": {
+      "name": "Test Room 1",
+      "created_by": 1,
+      "admin": 1
+    }
+  },
+  {
+    "model": "django_chat.Room",
+    "pk": "1cae077d-92a0-4bf9-b1ab-1deea1cf02c4",
+    "fields": {
+      "name": "Test Room 2",
+      "created_by": 2,
+      "admin": 2
+    }
+  },
+  {
+    "model": "django_chat.Message",
+    "pk": "9a2edaa0-4d7d-4da8-83e4-940f848dacd6",
+    "fields": {
+      "room": "1cae077d-92a0-4bf9-b1ab-1deea1cf02c4",
+      "sender": 1,
+      "message": "In it except to so temper mutual tastes mother. Interested cultivated its continuing now yet are. Out interested acceptance our partiality affronting unpleasant why add. Esteem garden men yet shy course. Consulted up my tolerably sometimes perpetual oh. Expression acceptance imprudence particular had eat unsatiable."
+    }
+  },
+  {
+    "model": "django_chat.Message",
+    "pk": "9cea4809-bc4c-4bff-ac3d-5b17d9ef0c50",
+    "fields": {
+      "room": "1cae077d-92a0-4bf9-b1ab-1deea1cf02c4",
+      "sender": 2,
+      "message": "Smaller text sample"
+    }
+  },
+  {
+    "model": "django_chat.User",
+    "pk": 1,
+    "fields": {
+      "rooms": [
+        "af970da6-51e9-46e0-8bb1-e2ee69d4794a",
+        "1cae077d-92a0-4bf9-b1ab-1deea1cf02c4"
+      ]
+    }
+  },
+  {
+    "model": "django_chat.User",
+    "pk": 2,
+    "fields": {
+      "rooms": [
+        "1cae077d-92a0-4bf9-b1ab-1deea1cf02c4"
+      ]
+    }
+  }
+]

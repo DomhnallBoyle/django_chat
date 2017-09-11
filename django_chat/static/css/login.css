@@ -1,0 +1,40 @@
+#login-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #D3D3D3;
+  margin-top: 5%;
+  box-shadow: 0 0 10px; }
+  #login-wrapper #form-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 70px; }
+    #login-wrapper #form-wrapper #login-form {
+      width: 300px;
+      height: 200px; }
+      #login-wrapper #form-wrapper #login-form .field-wrapper {
+        width: 300px;
+        height: 50px;
+        background-color: white;
+        margin-bottom: 10px; }
+        #login-wrapper #form-wrapper #login-form .field-wrapper i {
+          float: left;
+          width: 50px;
+          padding-left: 15px;
+          padding-top: 10px; }
+        #login-wrapper #form-wrapper #login-form .field-wrapper input {
+          float: right;
+          width: 230px;
+          border: none;
+          outline: none; }
+      #login-wrapper #form-wrapper #login-form #login-button {
+        width: 300px;
+        height: 50px;
+        border: none; }
+    #login-wrapper #form-wrapper #login-error {
+      width: 300px;
+      height: 50px;
+      text-align: center; }
+      #login-wrapper #form-wrapper #login-error h5 {
+        color: red; }

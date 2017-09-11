@@ -1,0 +1,30 @@
+{% for room in rooms %}
+    <div class="room-list-item">
+        <div class="room-list-item-info-wrapper">
+            <div class="room-image">
+                <i class="material-icons">group</i>
+            </div>
+            <div class="room-label">
+                <h4>{{ room.name }}</h4>
+            </div>
+            <div class="room-properties">
+                <div class="room-created-by">
+                    <h4>Admin: {{ room.admin.username }}</h4>
+                </div>
+                <div class="room-no-users">
+                    <h4>No. of users: {{ room.number_of_users }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="room-list-item-options">
+            {% if room.admin.username == request.user.username %}
+                <div class="edit-room">
+                    <i data-name="{{ room.name }}" data-creator="{{ room.admin.username }}" data-members="{{ room.members }}" class="material-icons">create</i>
+                </div>
+                <div class="delete-room">
+                    <i data-name="{{ room.name }}" class="material-icons">delete</i>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}

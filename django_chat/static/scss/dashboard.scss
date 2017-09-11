@@ -1,0 +1,212 @@
+#left-block {
+    width: 50%;
+    height: 80%;
+    margin-left: 10%;
+    background-color: #D3D3D3;
+    margin-top: 2%;
+    box-shadow: 0 0 10px;
+    float: left;
+
+    #left-block-header {
+        width: 100%;
+        height: 12%;
+        border-bottom: 3px solid black;
+
+        #chatrooms {
+            float: left;
+            width: 80%;
+            padding-left: 5%;
+
+            h2 {
+                line-height: 80%;
+            }
+        }
+
+        #create-chat-room {
+            width: 20%;
+            padding-right: 5%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            button {
+                border: none;
+            }
+        }
+    }
+
+    #room-list {
+        overflow-y: auto;
+        height: 88%;
+
+        .room-list-item {
+            width: 100%;
+            height: 15%;
+            border-bottom: 1px solid black;
+
+            .room-list-item-info-wrapper {
+                width: 90%;
+                float: left;
+                cursor: pointer;
+
+                .room-image {
+                    width: 20%;
+                    float: left;
+
+                    i {
+                        font-size: 60px;
+                        text-align: center;
+                        margin-top: 5%;
+                    }
+                }
+
+                .room-label {
+                    width: 40%;
+                    float: left;
+
+                    h4 {
+                        margin-top: 10%;
+                    }
+                }
+
+                .room-properties {
+                    width: 40%;
+
+                    .room-created-by {
+                        height: 50%;
+                    }
+
+                    .room-no-users {
+                        height: 50%;
+                    }
+                }
+
+                h4 {
+                    text-align: center;
+                }
+            }
+
+            .room-list-item-options {
+                width: 10%;
+
+                i {
+                    font-size: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .edit-room {
+                    height: 50%;
+                }
+
+                .delete-room {
+
+                }
+            }
+        }
+    }
+}
+
+#right-block {
+    width: 25%;
+    height: 80%;
+    background-color: #D3D3D3;
+    margin-left: 65%;
+    margin-top: 2%;
+    box-shadow: 0 0 10px;
+
+    #right-block-header {
+        width: 100%;
+        height: 12%;
+        border-bottom: 3px solid black;
+
+        h2 {
+            text-align: center;
+            line-height: 80%;
+        }
+    }
+
+    #create-room-form {
+        #create-room-name {
+            width: 90%;
+            height: 6%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 5%;
+            border: none;
+            padding-left: 5px;
+        }
+
+        #user-list {
+            width: 90%;
+            height: 40%;
+            margin: 0 auto;
+            margin-top: 10%;
+            border: 2px solid black;
+            overflow-y: auto;
+
+            .user-list-item {
+                width: 100%;
+                height: 30%;
+                border-bottom: 1px solid black;
+
+                .user-image {
+                    width: 20%;
+                    float: left;
+
+                    i {
+                        font-size: 40px;
+                        text-align: center;
+                        margin-top: 10%;
+                    }
+                }
+
+                .user-name {
+                    width: 50%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 3%;
+                }
+
+                .user-checkbox {
+                    width: 30%;
+
+                    input {
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 40%;
+                        margin-top: 20%;
+                    }
+                }
+            }
+        }
+
+        #create-room-button {
+            width: 30%;
+            height: 10%;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 5%;
+        }
+    }
+}
+
+.edit-chatroom {
+    #members {
+        li {
+            width: 100%;
+
+            button {
+                width: 30px;
+                height: 20px;
+                float: right;
+
+                i {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+
+                }
+            }
+        }
+    }
+}

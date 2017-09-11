@@ -1,0 +1,52 @@
+{% extends 'html/base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% load staticfiles %}
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}
+{% block content %}
+    <div id="main-block>">
+        <div id="left-block">
+            <div id="left-block-header">
+                <div id="chatrooms">
+                    <h2>{{ user.username }}'s Chatrooms</h2>
+                </div>
+            </div>
+            <div id="room-list">
+                {% include 'html/dashboard_room_list.html' %}
+            </div>
+        </div>
+        <div id="right-block">
+            <div id="right-block-header">
+                <h2>Create Chatroom</h2>
+            </div>
+            <div id="create-room-form">
+                <input type='text' id="create-room-name" name='room-name' placeholder="Chatroom Name"/>
+                <div id="user-list">
+                    {% for user in users %}
+                        <div class="user-list-item">
+                            <div class="user-image">
+                                <i class="material-icons">person</i>
+                            </div>
+                            <div class="user-name">
+                                <h4>{{ user.full_name }}</h4>
+                            </div>
+                            <div class="user-checkbox">
+                                <input type="checkbox" name="{{ user.username }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button id="create-room-button">Create</button>
+            </div>
+        </div>
+    </div>
+    <div id="dialog-box">
+
+    </div>
+{% endblock %}
